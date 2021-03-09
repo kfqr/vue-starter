@@ -1,29 +1,11 @@
 <template>
-
   <v-app id="app">
-
-    <v-app-bar app hide-on-scroll prominent absolute>
-      <v-spacer/>
-      <div id="nav">
-        <router-link to="/">Home</router-link>
-        |
-        <router-link to="/pdf">PDF</router-link>
-      </div>
-      <v-spacer/>
-    </v-app-bar>
     <v-main>
       <v-container fluid>
-        <h1>This is DEFAULT layout</h1>
         <router-view/>
       </v-container>
     </v-main>
-
-    <v-footer app>
-      &copy;&nbsp;{{ appName }}
-    </v-footer>
-
   </v-app>
-
 </template>
 
 <script>
@@ -57,5 +39,24 @@ export default {
       color: #42b983;
     }
   }
+}
+
+ #app .theme--light.v-application {
+  background: #ffffff80;
+}
+
+ #app .theme--dark.v-application {
+  background: #00000080;
+}
+
+.page-bg {
+  height: 100vh;
+  width: 100vw;
+  background-image: url('../asset/img/bg.jpg');
+  background-origin: content-box;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 </style>

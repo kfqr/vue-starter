@@ -8,6 +8,7 @@ export default new Vuetify({
   theme: {
       options: {
         customProperties: true,
+        sassOptions:{ gutters: 24 }
       },
     themes: {
       light: {
