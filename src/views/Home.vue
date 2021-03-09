@@ -61,17 +61,17 @@
           </v-sheet>
         </v-col>
       </v-row>
+    </v-container>
 
-      <v-row no-gutters>
+    <v-row no-gutters class="ml-n4 mr-n6 ">
         <v-col cols="12">
           <v-parallax
-              :style="paraStyle"
-              src="../asset/img/6.jpg"
+              src="../asset/img/7.jpg"
           >
           </v-parallax>
 
         </v-col>
-        <v-col  cols="12">
+        <v-col  cols="12" class="mt-0">
 
           <v-sheet
               elevation="1"
@@ -85,7 +85,7 @@
               Бонвилльский треугольник
             </h1>
             <v-divider></v-divider>
-            <h4 class="subheading">
+            <h4 class="subheading pa-16">
               это не простая лаборатория, а цифровая, с современным фрезерным Cad/Cam
               центром (Computer Aided Design — компьютерное проектирование, Computer Aided Manufacturing —
               компьютерное
@@ -103,9 +103,7 @@
 
           </v-sheet>
         </v-col>
-      </v-row>
-      
-    </v-container>
+    </v-row>
   </div>
 </template>
 <script>
