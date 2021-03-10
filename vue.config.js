@@ -11,7 +11,7 @@ module.exports = {
 
     configureWebpack: {
         output: {
-            chunkFilename: process.env.NODE_ENV === "production" ? "js/[chunkhash:8].js" : "js/[id].js"
+            chunkFilename: process.env.NODE_ENV === "production" ? "asset/js/[chunkhash:8].js" : "asset/js/[id].js"
         },
     },
 
@@ -24,7 +24,7 @@ module.exports = {
             config.plugin("CompressionPlugin").use(CompressionPlugin);
 
             config.plugin('extract-css').tap((opts) => {
-                opts[0].chunkFilename = process.env.NODE_ENV === "production" ? "css/[chunkhash:8].css" : "js/[id].css"
+                opts[0].chunkFilename = process.env.NODE_ENV === "production" ? "asset/css/[chunkhash:8].css" : "asset/js/[id].css"
                 return opts;
             });
 
