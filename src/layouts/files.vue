@@ -1,6 +1,11 @@
 <template>
-  <div id="app">
-    <h1>this is FILES layout</h1>
-    <router-view/>
-  </div>
+
+  <v-app id="app">
+    <v-main>
+      <v-container fluid>
+        <router-view/>
+      </v-container>
+    </v-main>
+  </v-app>
+
 </template>

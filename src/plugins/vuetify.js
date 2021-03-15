@@ -3,7 +3,7 @@ import Vuetify from 'vuetify/lib/framework';
 import ru from 'vuetify/lib/locale/ru';
 
 // see icons on https://materialdesignicons.com/
-import {mdiPig} from "@mdi/js";
+import {mdiPig, mdiFilePdfBoxOutline, mdiHome} from "@mdi/js";
 
 Vue.use(Vuetify);
 
@@ -14,6 +14,8 @@ export default new Vuetify({
     iconfont: 'mdiSvg', // 'mdi' || 'mdiSvg' || 'md' || 'fa' || 'fa4' || 'faSvg'
     values: {
       pig: mdiPig, // add custom icon to $vuetify
+      pdf: mdiFilePdfBoxOutline,
+      home: mdiHome
     }
   },
   theme: {

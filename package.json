@@ -32,6 +32,7 @@
     "vue-cli-plugin-layouts": "^1.0.2",
     "vue-cli-plugin-vuetify": "^2.2.2",
     "vue-extend-layout": "^2.0.6",
+    "vue-html2pdf": "^1.8.0",
     "vue-template-compiler": "^2.6.11",
     "vuetify-loader": "^1.7.0",
     "webpack": "^4"

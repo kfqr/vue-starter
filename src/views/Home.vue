@@ -15,6 +15,13 @@
               :label="$vuetify.theme.dark?'Dark':'Light'"
           ></v-switch>
         </p>
+        <div class="navigation">
+          <v-tabs hide-slider centered class="nav-tabs">
+            <v-tab v-for="item in menuItems" :to="item.path" :key="item.title">
+              {{ item.title }}
+            </v-tab>
+          </v-tabs>
+        </div>
       </v-col>
     </v-row>
     <v-container style="padding-top: 0">
@@ -28,7 +35,7 @@
           </v-parallax>
 
         </v-col>
-        <v-col  cols="12">
+        <v-col cols="12">
 
           <v-sheet
               elevation="1"
@@ -64,45 +71,45 @@
     </v-container>
 
     <v-row no-gutters class="ml-n4 mr-n6 ">
-        <v-col cols="12">
-          <v-parallax
-              src="../asset/img/7.jpg"
-          >
-          </v-parallax>
+      <v-col cols="12">
+        <v-parallax
+            src="../asset/img/7.jpg"
+        >
+        </v-parallax>
 
-        </v-col>
-        <v-col  cols="12" class="mt-0">
+      </v-col>
+      <v-col cols="12" class="mt-0">
 
-          <v-sheet
-              elevation="1"
-              color="white"
-              height="100%"
-              width="100%"
-              class="text-center pa-16"
-          >
+        <v-sheet
+            elevation="1"
+            color="white"
+            height="100%"
+            width="100%"
+            class="text-center pa-16"
+        >
 
-            <h1 class="display-1 font-weight-thin mb-4">
-              Бонвилльский треугольник
-            </h1>
-            <v-divider></v-divider>
-            <h4 class="subheading pa-16">
-              это не простая лаборатория, а цифровая, с современным фрезерным Cad/Cam
-              центром (Computer Aided Design — компьютерное проектирование, Computer Aided Manufacturing —
-              компьютерное
-              изготовление). Кроме пластиковых, металлокерамических и цельнокерамических коронок и протезов, во
-              фрезерном центре изготавливаются позиционные хирургические шаблоны для малоинвазивной сверхточной
-              имплантации, а
-              также ортодонтические эллайнеры для быстрого и незаметного исправления неправильного прикуса.
-              Современные
-              фрезерные Сad/Сam системы позволяют изготавливать высокоточные изделия с краевым прилеганием 20 мкм и
-              менее, а
-              также обрабатывать высокопрочные и инновационные материалы (титан, хром-кобальт, диоксид циркония,
-              Peek,
-              Pmma, Trinia, Enamic и др).
-            </h4>
+          <h1 class="display-1 font-weight-thin mb-4">
+            Бонвилльский треугольник
+          </h1>
+          <v-divider></v-divider>
+          <h4 class="subheading pa-16">
+            это не простая лаборатория, а цифровая, с современным фрезерным Cad/Cam
+            центром (Computer Aided Design — компьютерное проектирование, Computer Aided Manufacturing —
+            компьютерное
+            изготовление). Кроме пластиковых, металлокерамических и цельнокерамических коронок и протезов, во
+            фрезерном центре изготавливаются позиционные хирургические шаблоны для малоинвазивной сверхточной
+            имплантации, а
+            также ортодонтические эллайнеры для быстрого и незаметного исправления неправильного прикуса.
+            Современные
+            фрезерные Сad/Сam системы позволяют изготавливать высокоточные изделия с краевым прилеганием 20 мкм и
+            менее, а
+            также обрабатывать высокопрочные и инновационные материалы (титан, хром-кобальт, диоксид циркония,
+            Peek,
+            Pmma, Trinia, Enamic и др).
+          </h4>
 
-          </v-sheet>
-        </v-col>
+        </v-sheet>
+      </v-col>
     </v-row>
   </div>
 </template>
@@ -110,7 +117,12 @@
 export default {
   name: 'Home',
   data() {
-    return {};
+    return {
+      menuItems: [
+        {title: 'О лаборатории', path: '/', icon: this.$vuetify.icons.values.home},
+        {title: 'Заказ', path: '/pdf', icon: this.$vuetify.icons.values.pdf},
+      ]
+    };
   },
   computed: {
     logoText() {
@@ -133,11 +145,14 @@ export default {
   }
 }
 </script>
-<style lang="scss">
+<style scoped>
 
-.coll-bg {
-  background-color: #ffffff;
+.navigation >>> .theme--light.v-tabs > .v-tabs-bar {
+  background: linear-gradient(90deg, transparent, 30%, #ffffff7a, 70%, transparent);
 }
 
+.navigation >>> .theme--dark.v-tabs > .v-tabs-bar {
+  background: linear-gradient(90deg, transparent, 30%, #00000066, 70%, transparent);
+}
 
 </style>
